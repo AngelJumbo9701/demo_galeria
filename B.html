@@ -1,0 +1,44 @@
+<html>
+  <head>
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>   
+        
+  <body>
+    <a-scene>
+        
+        <a-camera position="0 1 0" id="myCamara">
+            
+            <a-cursor intersection-spawn="Event: click; mixin:voxel;" material="color: #ffffff; height: 256.15" raycaster="" cursor="" geometry=""></a-cursor>
+            
+        </a-camera>
+        
+        <a-assets>
+            
+            <video id="my-video" autoplay loop="true" src="Videos/Video_1.mp4" webkit-playsinline></video>
+            
+            <img id= "play" src="iconos/play.png" >
+            
+            <img id="sky" src="img/hdr.jpg">
+            
+        </a-assets>
+        
+        <a-sky src="#sky"></a-sky>
+        
+        <a-video src="#my-video" width="16" height="9" position="0 2 -11">
+            <a-image id= "control " src ="#play" position="0 -6 0" > </a-image>
+        </a-video>
+        
+        <!-- Puerta -->
+        <a-gltf-model data-brackets-id="25" src="#puerta" gltf-model="3d/puerta.glb" scale="100 100 100" id="puerta"></a-gltf-model>
+        
+    </a-scene>
+  </body>
+    <script>
+    
+        document
+        .querySelector("#puerta")
+        .addEventListener("mouseenter",e => {location.href="A.html";});
+    
+    </script>
+</html>

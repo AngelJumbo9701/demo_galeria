@@ -1,0 +1,37 @@
+<html>
+  <head>
+      <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+     
+  </head>
+        
+  <body>
+    <a-scene>
+
+        <a-assets>
+            <img id="sky" src="img/hdr.jpg">
+        </a-assets>
+        
+        <a-sky src="#sky"></a-sky>
+        
+        <a-camera position="0 1 0" id="myCamara">
+            <a-cursor intersection-spawn="Event: click; mixin:voxel;" material="color: #ffffff; height: 256.15" raycaster="" cursor="" geometry=""></a-cursor>
+        </a-camera>
+        
+        <a-gltf-model data-brackets-id="25" src="#Esc_1" gltf-model="3d/A.glb" scale="100 100 100" id="Esc_1"></a-gltf-model>
+        <a-gltf-model data-brackets-id="25" src="#puerta" gltf-model="3d/puerta.glb" scale="100 100 100" id="puerta"></a-gltf-model>
+        
+        <a-entity light="intensity: 5" visible="" id="Sol" position="0 4.125 0"></a-entity>
+        
+        <a-entity light="color: #f0f9ff; groundColor: #682c2c; intensity: 2; type: spot; shadowCameraVisible: true" visible="" position="0 -13.344 0" rotation="90 0 0"></a-entity>
+        
+    </a-scene>
+  </body>
+    <script>
+    
+        document
+        .querySelector("#puerta")
+        .addEventListener("mouseenter",e => {location.href="b.html";});
+    
+    </script>
+</html>
+    
